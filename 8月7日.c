@@ -133,23 +133,23 @@ int main()
 
     int left = 0;
     int right = sz-1;
-    int mid = (left + right)/2;
     while(left<=right)
+    {
+        int mid = (left + right)/2;
         if(arr[mid]<n)
         {
             left = mid+1;
-            mid =(left + right)/2;
         }
         else if(arr[mid]>n)
         {
             right = mid - 1;
-            mid = (left + right)/2;
         }
         else
         {
         printf("输入的数字n在数组中的下标为:%d",mid);
         break;
         }
+    }
     if(left>right)
     {
         printf("输入的数字n不在数组中");
